@@ -1,0 +1,34 @@
+Group members: Xiaorui Liu, Billy Chen
+Openstack instance name: xiaoruiliu_billychen
+
+Before testing:
+1. Ensure that the latest version of Node.js is installed in the environment. Download address: https://nodejs.org/
+2. Install the postman. Download address: https://www.postman.com/downloads/
+3. Install the latest version of Mongodb. The download address is https://www.mongodb.com/try/download/community.
+4. Enter the root directory of the project and execute the 'npm install' command in the terminal to install the dependencies.
+5. Connect Carleton vpn.
+
+How to test:
+1. After the dependency installation is completed, execute 'npm run crawler' in the terminal to crawl the entire two sites together. 
+   If you'd like to crawl one by one, execute 'node crawler.js' and 'node wikipedia-crawler.js'.
+2. Execute 'node server.js' to start the server.
+If you'd like to test in the localhost:
+3. Open http://localhost:3000 in the browser to search fruits. 
+   Open http://localhost:3000/wikipedia in the browser to search others.
+If you'd like to test with vpn:
+3. Open http://134.117.131.62:3000 in the browser to search fruits. 
+   Open http://134.117.131.62/wikipedia in the browser to search others.
+
+Fruit web page test:
+1. Enter the address http://localhost:3000 or http://134.117.131.62:3000 in the address bar of the browser window, and check whether the page is successfull displayed, including search and limit label, search and limit input, boost checkbox, search button, and the search results (URL, Title, Score, PageRank, Actions).
+2. Enter the fruit in the search input and click Search button. The page will display the search results (URL, Title, Score, PageRank, Actions).
+3. Click the View link to view the details (URL, incoming results, outgoing results, word frequency).
+
+Personal web page test:
+1. Enter the address http://localhost:3000/wikipedia or http://134.117.131.62/wikipedia in the address bar of the browser window, and check whether the page is successfull displayed, including search and limit label, search and limit input, boost checkbox, search button, and the search results (URL, Title, Score, PageRank, Actions).
+2. Enter a word in the search input and click Search button. The page will display the search results (URL, Title, Score, PageRank, Actions).
+3. Click the View link to view the details (URL, incoming results, outgoing results, word frequency).
+
+Postman test: 
+1. Select 'GET' as the request type, enter the address http://localhost:3000/fruits. 
+2. Select 'GET' as the request type, enter the address http://localhost:3000/personal. 
